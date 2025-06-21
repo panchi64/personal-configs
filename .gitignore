@@ -1,0 +1,15 @@
+# Ignore everything in the .config directory
+*
+
+# But don't ignore directories themselves (important for "re-includes" to work)
+!*/
+
+# Operating System
+!waybar/**
+!hypr/**
+
+# Applications
+!wofi/**
+!zed/**
+
+!.gitignore
