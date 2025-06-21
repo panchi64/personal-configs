@@ -1,0 +1,90 @@
+// ~/.config/waybar/config.jsonc
+{
+  "layer": "top",
+  "position": "top",
+  "height": 40,
+  "spacing": 4,
+  "exclusive": true,
+
+  // Module positioning
+  "modules-left": ["custom/launcher", "custom/username"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["pulseaudio", "network", "custom/search", "clock"],
+
+  // Left side modules
+  "custom/launcher": {
+    "format": "",
+    "on-click": "~/.config/waybar/scripts/power-menu.sh",
+    "tooltip": false,
+  },
+
+  "custom/username": {
+    "exec": "echo $(whoami) | sed 's/\\b\\(\\w\\)/\\u\\1/g'",
+    "interval": "once",
+    "format": "{}",
+    "tooltip": false,
+  },
+
+  // Center module
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "format": "{name}",
+    "on-click": "activate",
+    "sort-by-number": true,
+    "active-only": false,
+    "persistent-workspaces": {
+      "*": 5,
+    },
+  },
+
+  // Right side modules
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"],
+    },
+    "on-click": "~/.config/waybar/scripts/audio-menu.sh",
+    "on-click-right": "pavucontrol",
+    "scroll-step": 5,
+    "tooltip": true,
+    "tooltip-format": "{desc} • {volume}%",
+  },
+
+  "network": {
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈁",
+    "format-disconnected": "󰤭",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "on-click-right": "~/.config/waybar/scripts/wifi-menu.sh",
+    "tooltip": true,
+    "tooltip-format-wifi": "{essid} • {signalStrength}%",
+    "tooltip-format-ethernet": "Ethernet Connected",
+    "tooltip-format-disconnected": "Disconnected",
+  },
+
+  "custom/search": {
+    "format": "󰍉",
+    "on-click": "wofi --show drun -I",
+    "tooltip": false,
+  },
+
+  "clock": {
+    "format": "{:%a %b %d %I:%M %p}",
+    "tooltip": true,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#cdd6f4'><b>{}</b></span>",
+        "days": "<span color='#bac2de'><b>{}</b></span>",
+        "weeks": "<span color='#94e2d5'><b>W{}</b></span>",
+        "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
+        "today": "<span color='#f38ba8'><b><u>{}</u></b></span>",
+      },
+    },
+  },
+}
