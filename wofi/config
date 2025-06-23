@@ -1,0 +1,28 @@
+# ~/.config/wofi/config
+
+# Enable application icons
+allow_images=true
+
+# Set icon size (24px for balanced appearance)
+image_size=32
+
+# Use drun mode by default (required for icons)
+show=drun
+
+# Window dimensions
+width=800
+height=480
+
+# Appearance settings
+lines=8
+columns=1
+
+# Search behavior
+filter_rate=100
+allow_markup=true
+
+# Performance
+cache_file=/tmp/wofi-cache
+
+# Prompt text
+prompt=Search Applications

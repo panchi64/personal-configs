@@ -46,10 +46,11 @@ window {
 }
 
 #entry {
-    padding: 8px 12px;
-    margin: 2px 0;
+    padding: 10px 16px;
+    margin: 3px 0;
     border-radius: 8px;
     background-color: transparent;
+    min-height: 32px;
 }
 
 #entry:selected {
@@ -80,4 +81,27 @@ window {
 
 #scroll scrollbar:handle:hover {
     background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Icon styling */
+#img {
+    margin-right: 12px;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+#entry:selected #img {
+    opacity: 1;
+}
+
+/* Enhanced entry layout for icons */
+#entry {
+    display: flex;
+    align-items: center;
+}
+
+#entry #text {
+    flex: 1;
+    margin: 0;
+    padding: 0;
 }
