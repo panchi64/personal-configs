@@ -8,7 +8,7 @@
 
   // Module positioning
   "modules-left": ["custom/launcher", "custom/username"],
-  "modules-center": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/workspaces", "tray"],
   "modules-right": ["pulseaudio", "network", "custom/search", "clock"],
 
   // Left side modules
@@ -36,6 +36,14 @@
     "persistent-workspaces": {
       "*": 5,
     },
+  },
+
+  // Tray module
+  "tray": {
+    "icon-size": 20,
+    "spacing": 12,
+    "show-passive-items": false,
+    "reverse-direction": false,
   },
 
   // Right side modules
