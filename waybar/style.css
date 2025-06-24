@@ -41,6 +41,7 @@ window#waybar {
 #tray,
 #pulseaudio,
 #network,
+#custom-bluetooth,
 #custom-search,
 #clock {
     padding: 0 10px;
@@ -150,6 +151,10 @@ window#waybar {
     font-size: 16px;
 }
 
+#custom-bluetooth {
+    font-size: 16px;
+}
+
 #custom-search {
     font-size: 16px;
 }
@@ -162,11 +167,25 @@ window#waybar {
 /* Hover effects */
 #pulseaudio:hover,
 #network:hover,
+#custom-bluetooth:hover,
 #custom-search:hover,
 #custom-launcher:hover {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     transition: all 0.2s ease-in-out;
+}
+
+/* Bluetooth status-specific styling */
+#custom-bluetooth.connected {
+    color: #a6e3a1;
+}
+
+#custom-bluetooth.off {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#custom-bluetooth.unavailable {
+    color: rgba(255, 255, 255, 0.3);
 }
 
 /* Tooltip styling */
