@@ -12,5 +12,6 @@
 # Applications
 !wofi/**
 !zed/**
+!ghostty/**
 
 !.gitignore
