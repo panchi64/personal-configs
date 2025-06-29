@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4"
+    },
+    "model_parameters": [],
+    "play_sound_when_agent_done": true,
+    "version": "2"
+  },
   "show_edit_predictions": false,
   "languages": {
     "Markdown": {
