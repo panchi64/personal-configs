@@ -1,0 +1,65 @@
+# Yazi theme matching waybar style
+# Main colors from waybar: white text (#ffffff), semi-transparent backgrounds, green accents (#a6e3a1), pink urgents (#f38ba8)
+
+[mgr]
+cwd = { fg = "#ffffff", bg = "reset" }
+hovered = { bg = "#a6e3a1", fg = "#000000", bold = true }
+preview_hovered = { bg = "#333333" }
+find_keyword = { fg = "#f38ba8", bg = "reset", bold = true }
+find_position = { fg = "#ffffff", bg = "#f38ba8" }
+
+[status]
+separator_open = ""
+separator_close = ""
+separator_style = { fg = "darkgray" }
+
+[input]
+border = { fg = "#a6e3a1" }
+title = { fg = "#ffffff" }
+value = { fg = "#ffffff" }
+selected = { bg = "#333333" }
+
+[tasks]
+border = { fg = "darkgray" }
+title = { fg = "#ffffff" }
+hovered = { fg = "#ffffff", bg = "#333333" }
+
+[which]
+cols = 3
+mask = { bg = "black" }
+cand = { fg = "#ffffff" }
+rest = { fg = "lightgray" }
+desc = { fg = "lightgray" }
+separator = "  "
+separator_style = { fg = "darkgray" }
+
+[help]
+on = { fg = "#a6e3a1" }
+run = { fg = "#ffffff" }
+desc = { fg = "lightgray" }
+hovered = { bg = "#333333" }
+footer = { fg = "lightgray" }
+
+[notify]
+title_info = { fg = "#a6e3a1" }
+title_warn = { fg = "#f38ba8" }
+title_error = { fg = "#f38ba8" }
+icon_info = ""
+icon_warn = ""
+icon_error = ""
+content = { fg = "#ffffff" }
+
+[filetype]
+rules = [
+    { mime = "image/*", fg = "#a6e3a1" },
+    { mime = "video/*", fg = "#a6e3a1" },
+    { mime = "audio/*", fg = "#a6e3a1" },
+    { mime = "application/zip", fg = "#f38ba8" },
+    { mime = "application/gzip", fg = "#f38ba8" },
+    { mime = "application/x-tar", fg = "#f38ba8" },
+    { mime = "application/x-bzip*", fg = "#f38ba8" },
+    { mime = "application/x-7z-compressed", fg = "#f38ba8" },
+    { mime = "application/x-rar", fg = "#f38ba8" },
+    { name = "*", fg = "#ffffff" },
+    { name = "*/", fg = "#ffffff" }
+]
